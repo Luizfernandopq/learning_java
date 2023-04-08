@@ -4,6 +4,6 @@ public interface Compra {
 	Double getValorTotal();
 	void finalizarCompra();
 	void verCompra();
-	void adicionarProduto();
-	void removerProduto();
+	void adicionarProduto(Produto produto);
+	void removerProduto(Produto produto);
 }
