@@ -29,7 +29,7 @@ public class PagamentoJoia implements Pagamento {
 
 	@Override
 	public void verPagamento() {
-		DecimalFormat f = new DecimalFormat("#,##");
+		DecimalFormat f = new DecimalFormat("#.##");
 		System.out.println("Pagamento dia: " + data + "\t Valor: " + 
 				f.format(valor));
 	}
