@@ -16,8 +16,8 @@ public class ClienteJoia implements Cliente {
 	
 	
 	public ClienteJoia(String nome, String contato) {
-		this.compras = new ArrayList<Compra>();
-		this.pagamentos = new ArrayList<Pagamento>();
+		this.compras = new ArrayList<>();
+		this.pagamentos = new ArrayList<>();
 		this.nome = nome;
 		this.contato = contato;
 	}
