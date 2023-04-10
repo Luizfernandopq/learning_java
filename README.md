@@ -5,14 +5,19 @@ Um repositório para revisão dos paradigmas da linguagem java e desenvolvimento
 ## Conceitos Aplicados
 
 Interfaces para Baixo Acopamento
+
 Programação Funcional
+
 JDBC + SQLSERVER
+
 SOLID
 
 ## Habilidades em Desenvolvimento
 
 JPA
+
 Hibernate
+
 Spring Boot
 
 ## Outros conhecimentos desejáveis
