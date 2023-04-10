@@ -1,6 +1,9 @@
 package tests;
 
 import java.util.List;
+import java.sql.Date;
+import java.text.SimpleDateFormat;
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Comparator;
 import model.classes.*;
@@ -12,7 +15,6 @@ public class Main {
 	public static void main(String[] args) {
 //		preencheCarrinho();
 		testCompraFuncional();
-		
 	}
 
 	private static void preencheCarrinho() {
@@ -54,7 +56,7 @@ public class Main {
 		};
 		c.getCompras().sort(comp);
 		System.out.println(c.getCompras());
-		
+		c.verHistorico();
 	}
 	
 	private static void testeCodigoAutoIncrement() {

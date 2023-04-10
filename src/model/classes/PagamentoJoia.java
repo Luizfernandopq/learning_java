@@ -1,6 +1,8 @@
 package model.classes;
 
+import java.sql.Date;
 import java.text.DecimalFormat;
+import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 
 import model.interfaces.Pagamento;
@@ -11,7 +13,7 @@ public class PagamentoJoia implements Pagamento {
 	private LocalDate data;
 	
 	public LocalDate getData() {
-		return data;
+		return this.data;
 	}
 
 	public void setData(LocalDate data) {
@@ -30,7 +32,9 @@ public class PagamentoJoia implements Pagamento {
 	@Override
 	public void verPagamento() {
 		DecimalFormat f = new DecimalFormat("#.##");
-		System.out.println("Pagamento dia: " + data + "\t Valor: " + 
+		SimpleDateFormat formatador = new SimpleDateFormat("dd/MM/yyyy");
+		String date = formatador.format(Date.valueOf(this.data));
+		System.out.println("Pagamento dia: " + date + "\t Valor: " + 
 				f.format(valor));
 	}
 

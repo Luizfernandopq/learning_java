@@ -40,7 +40,7 @@ public class ProdutoJoia implements Produto {
 	@Override
 	public void verProduto() {
 		DecimalFormat f = new DecimalFormat("#.##");
-		System.out.println("Nome: " + nome + "\nValor: " + f.format(valor));
+		System.out.println("Nome: " + nome + "\nValor: " + f.format(valor) + "\n");
 	}
 
 	@Override

@@ -61,7 +61,7 @@ public class CompraJoia implements Compra {
 
 	@Override
 	public void verCompra() {
-		System.out.println("MomentoCompra=" + momentoCompra + "]");
+		System.out.println("[MomentoCompra=" + momentoCompra + "]");
 		for (Produto p : this.produtos) {
 			p.verProduto();
 		}

@@ -1,5 +1,7 @@
 package model.funcional;
 
+import java.sql.Date;
+import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
@@ -73,7 +75,9 @@ public class CompraJoiaFuncional implements Compra {
 
 	@Override
 	public void verCompra() {
-		System.out.println("MomentoCompra=" + momentoCompra + "]");
+		SimpleDateFormat formatador = new SimpleDateFormat("dd/MM/yyyy");
+		String date = formatador.format(Date.valueOf(this.momentoCompra));
+		System.out.println("[Dia da Compra: " + date + "]");
 		for (Produto p : this.produtos) {
 			p.verProduto();
 		}
