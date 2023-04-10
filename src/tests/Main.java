@@ -1,7 +1,13 @@
 package tests;
 
 import java.util.List;
+
+import javax.swing.JOptionPane;
+import javax.swing.JPasswordField;
+
+import java.sql.Connection;
 import java.sql.Date;
+import java.sql.DriverManager;
 import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 import java.util.ArrayList;
@@ -14,7 +20,8 @@ public class Main {
 
 	public static void main(String[] args) {
 //		preencheCarrinho();
-		testCompraFuncional();
+//		testCompraFuncional();
+		testConnection();
 	}
 
 	private static void preencheCarrinho() {
@@ -69,6 +76,26 @@ public class Main {
 		System.out.println(c3.getCodigoCompra());
 	}
 	
-	
+	public static void testConnection() {
+    	String connectionUrl = "jdbc:sqlserver://localhost:1433;databaseName=testDB;user=sa;password=";
+        JPasswordField pf = new JPasswordField();
+        int okCxl = JOptionPane.showConfirmDialog(null, pf, "Enter Password", JOptionPane.OK_CANCEL_OPTION, JOptionPane.PLAIN_MESSAGE);
+
+        if (okCxl == JOptionPane.OK_OPTION) {
+          String password = new String(pf.getPassword());
+          connectionUrl += password;
+        }
+        try {
+            // Load SQL Server JDBC driver and establish connection.
+            System.out.print("Connecting to SQL Server ... ");
+            try (Connection connection = DriverManager.getConnection(connectionUrl)) {
+                System.out.println("Done.");
+            }
+        } catch (Exception e) {
+            System.out.println();
+            e.printStackTrace();
+        }
+    }
+
 	
 }
