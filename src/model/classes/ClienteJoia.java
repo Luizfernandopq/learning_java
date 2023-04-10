@@ -9,6 +9,7 @@ import model.interfaces.Pagamento;
 
 public class ClienteJoia implements Cliente {
 
+	private int uniqueId;
 	private List<Compra> compras;
 	private List<Pagamento> pagamentos;
 	private String nome;
@@ -26,6 +27,14 @@ public class ClienteJoia implements Cliente {
 	 * Getters e Setters
 	*/
 	
+	public int getUniqueId() {
+		return uniqueId;
+	}
+
+	public void setUniqueId(int uniqueId) {
+		this.uniqueId = uniqueId;
+	}
+
 	public List<Compra> getCompras() {
 		return compras;
 	}

@@ -5,7 +5,8 @@ import java.text.DecimalFormat;
 import model.interfaces.Produto;
 
 public class ProdutoJoia implements Produto {
-	
+
+	private int uniqueId;
 	private String nome;
 	private String descricao;
 	private Double valor;
@@ -16,7 +17,15 @@ public class ProdutoJoia implements Produto {
 		this.descricao = descricao;
 		this.valor = valor;
 	}
+	
+	public int getUniqueId() {
+		return uniqueId;
+	}
 
+	public void setUniqueId(int uniqueId) {
+		this.uniqueId = uniqueId;
+	}
+	
 	public String getNome() {
 		return nome;
 	}

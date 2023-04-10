@@ -9,9 +9,23 @@ import model.interfaces.Pagamento;
 
 public class PagamentoJoia implements Pagamento {
 
+	private int uniqueId;
 	private Double valor;
 	private LocalDate data;
 	
+	
+	public PagamentoJoia(Double valor) {
+		this.valor = valor;
+		this.data = LocalDate.now();
+	}
+
+	public int getUniqueId() {
+		return uniqueId;
+	}
+
+	public void setUniqueId(int uniqueId) {
+		this.uniqueId = uniqueId;
+	}
 	public LocalDate getData() {
 		return this.data;
 	}

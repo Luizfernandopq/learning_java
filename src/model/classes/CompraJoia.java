@@ -9,7 +9,8 @@ import model.interfaces.Compra;
 import model.interfaces.Produto;
 
 public class CompraJoia implements Compra {
-	
+
+	private int uniqueId;
 	private List<Produto> produtos;
 	private Cliente cliente;
 	private LocalDate momentoCompra;
@@ -18,6 +19,14 @@ public class CompraJoia implements Compra {
 		this.cliente = cliente;
 		this.momentoCompra = LocalDate.now();
 		this.produtos = new ArrayList<Produto>();
+	}
+	
+	public int getUniqueId() {
+		return uniqueId;
+	}
+
+	public void setUniqueId(int uniqueId) {
+		this.uniqueId = uniqueId;
 	}
 	
 	public List<Produto> getProdutos() {
