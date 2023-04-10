@@ -88,5 +88,10 @@ public class CompraJoiaFuncional implements Compra {
 	public void removerProduto(Produto produto) {
 		this.produtos.remove(produto);
 	}
+
+	@Override
+	public String toString() {
+		return "CompraJoiaFuncional [codigoCompra=" + codigoCompra + "]";
+	}
 	
 }
